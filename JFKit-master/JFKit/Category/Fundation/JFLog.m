@@ -1,4 +1,4 @@
-#import "NSArray+JFLog.h"
+#import "JFLog.h"
 
 @implementation NSArray (JFLog)
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
