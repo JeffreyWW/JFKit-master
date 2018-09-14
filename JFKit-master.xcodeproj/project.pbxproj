@@ -17,6 +17,7 @@
 		997B757CBCBEE475FF3D7AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B7108F69C60B6008B441F /* Assets.xcassets */; };
 		997B75E0FB7682B9390B4F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B728546D83BECAD6B2BDF /* main.m */; };
 		997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7FF41602BFFB0E725941 /* Main.storyboard */; };
+		997B7961F12C98E47C7DBB03 /* NSArray+JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E0BD6C1CAA937C50D42 /* NSArray+JFLog.m */; };
 		997B7A006FDE4A92AD8F1CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7B6127B16915326D3383 /* LaunchScreen.storyboard */; };
 		997B7D572498583F0BBE52BF /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */; };
 		F8BA2363AF192B8906A9E5E9 /* libPods-JFKit-master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */; };
@@ -36,11 +37,13 @@
 		997B7633B94A7CEE131B2DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		997B76DB453CFF1A2D5B54E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		997B7793C9336B245C43A2DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		997B7802077575C4EB8C094A /* NSArray+JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JFLog.h"; sourceTree = "<group>"; };
 		997B794293F1C254DCF92556 /* CPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApi.h; sourceTree = "<group>"; };
 		997B79DE2952DE5C7E5D461D /* JFNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFNetManager.h; sourceTree = "<group>"; };
 		997B7C9AFDC149654BFE43AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		997B7D1B47433054D526476F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B7D93811DEDD38A7AF8E5 /* JFKit-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JFKit-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997B7E0BD6C1CAA937C50D42 /* NSArray+JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JFLog.m"; sourceTree = "<group>"; };
 		997B7E34B3750A80347D9577 /* JFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNetManager.m; sourceTree = "<group>"; };
 		997B7E4C025041E62473A82F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApi.m; sourceTree = "<group>"; };
@@ -74,6 +77,15 @@
 				1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		997B713A68B2B8D125B68240 /* Fundation */ = {
+			isa = PBXGroup;
+			children = (
+				997B7E0BD6C1CAA937C50D42 /* NSArray+JFLog.m */,
+				997B7802077575C4EB8C094A /* NSArray+JFLog.h */,
+			);
+			path = Fundation;
 			sourceTree = "<group>";
 		};
 		997B72B7410B43E74ADE420E /* NetWork */ = {
@@ -143,10 +155,19 @@
 			);
 			sourceTree = "<group>";
 		};
+		997B7F2910CDE872A8B142CC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				997B713A68B2B8D125B68240 /* Fundation */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		997B7F56AB2B6DF2ED1D91F7 /* JFKit */ = {
 			isa = PBXGroup;
 			children = (
 				997B72B7410B43E74ADE420E /* NetWork */,
+				997B7F2910CDE872A8B142CC /* Category */,
 			);
 			path = JFKit;
 			sourceTree = "<group>";
@@ -245,6 +266,7 @@
 				997B73059A86A35BE6EFA3DC /* JFNetManager.m in Sources */,
 				997B7D572498583F0BBE52BF /* CPApi.m in Sources */,
 				997B72060F23ACA5A6754065 /* CPApiResponse.m in Sources */,
+				997B7961F12C98E47C7DBB03 /* NSArray+JFLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

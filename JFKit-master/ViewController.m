@@ -11,7 +11,6 @@
 #import "JFNetManager.h"
 #import "NSBundle+YYAdd.h"
 #import "CPApi.h"
-#import "DDLogMacros.h"
 
 @interface ViewController ()
 
@@ -24,11 +23,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSString *f = [[NSBundle mainBundle] pathForScaledResource:@"fuck" ofType:@"plist"];
-    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:f];
+//    NSString *f = [[NSBundle mainBundle] pathForScaledResource:@"fuck" ofType:@"plist"];
+//    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:f];
 //    NSArray *array = [NSArray arrayWithContentsOfFile:f];
 
-    self.netManager = [JFNetManager managerWithDomain:@"https://www.baidu.com" subUrl:nil requestMethod:JFRequestMethodGET];
+//    self.netManager = [JFNetManager managerWithDomain:@"https://www.baidu.com" subUrl:nil requestMethod:JFRequestMethodGET];
     self.api = [[CPApi alloc] init];
 //    [[self.netManager.command.executionSignals skip:1] subscribeNext:^(RACSignal *x) {
 //        [x subscribeNext:^(id x) {
@@ -41,7 +40,8 @@
 - (IBAction)clickBtnRequest:(UIButton *)sender {
     [self.api.signal subscribeNext:^(id x) {
         NSLog(@"INFO:信息打印");
-        NSLog(@"*RESPONSE:%@*", x);
+        NSDictionary *dictionary = x;
+        NSLog(@"*RESPONSE:%@", dictionary);
         NSLog(@"DEBUG:debug打印");
 
     }                        error:^(NSError *error) {
