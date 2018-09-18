@@ -104,7 +104,6 @@
     if (!_coldSignal) {
         @weakify(self);
         _coldSignal = [RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
-            NSLog(@"发送请求");
             [self requestProgress:nil success:^(NSURLSessionDataTask *task, id response) {
                 [subscriber sendNext:response];
                 [subscriber sendCompleted];
@@ -115,27 +114,6 @@
         }];
     }
     return _coldSignal;
-}
-
-- (RACCommand *)command {
-    if (!_command) {
-        _command = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-            @weakify(self);
-            NSLog(@"请求信号开始创建");
-            return [RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
-                NSString *string = input;
-                if ([string isEqualToString:@"1"]) {
-                    [subscriber sendNext:input];
-                } else {
-                    [subscriber sendNext:input];
-
-                }
-                return nil;
-            }];
-        }];
-    }
-    _command.allowsConcurrentExecution = YES;
-    return _command;
 }
 
 @end

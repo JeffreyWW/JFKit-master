@@ -16,8 +16,10 @@
 		997B74283B5BF3B5C771B975 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B76DB453CFF1A2D5B54E3 /* ViewController.m */; };
 		997B757CBCBEE475FF3D7AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B7108F69C60B6008B441F /* Assets.xcassets */; };
 		997B75E0FB7682B9390B4F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B728546D83BECAD6B2BDF /* main.m */; };
+		997B76FDE0D450BF383B211E /* MBProgressHUD+JF.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */; };
 		997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7FF41602BFFB0E725941 /* Main.storyboard */; };
 		997B7A006FDE4A92AD8F1CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7B6127B16915326D3383 /* LaunchScreen.storyboard */; };
+		997B7B39ECBD775271DC8E5A /* CPApiError.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B74073A15C7DFA4915069 /* CPApiError.m */; };
 		997B7D572498583F0BBE52BF /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */; };
 		997B7F107C218E6596219AAC /* JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B719E914E97695E7F7216 /* JFLog.m */; };
 		F8BA2363AF192B8906A9E5E9 /* libPods-JFKit-master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */; };
@@ -32,7 +34,9 @@
 		997B7108F69C60B6008B441F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997B719E914E97695E7F7216 /* JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLog.m; sourceTree = "<group>"; };
 		997B728546D83BECAD6B2BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		997B731815D7D73A09AA7208 /* CPApiError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiError.h; sourceTree = "<group>"; };
 		997B733C39F28BD2F0951A2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		997B74073A15C7DFA4915069 /* CPApiError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiError.m; sourceTree = "<group>"; };
 		997B7408445A82CF07FD0ECF /* CPApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiResponse.m; sourceTree = "<group>"; };
 		997B74639C4FD3A7F5A2666D /* CPApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiResponse.h; sourceTree = "<group>"; };
 		997B7633B94A7CEE131B2DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,7 +44,9 @@
 		997B7793C9336B245C43A2DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		997B794293F1C254DCF92556 /* CPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApi.h; sourceTree = "<group>"; };
 		997B79DE2952DE5C7E5D461D /* JFNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFNetManager.h; sourceTree = "<group>"; };
+		997B7B58BA5A2E8772F1DB79 /* MBProgressHUD+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JF.h"; sourceTree = "<group>"; };
 		997B7C9AFDC149654BFE43AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JF.m"; sourceTree = "<group>"; };
 		997B7D1B47433054D526476F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B7D93811DEDD38A7AF8E5 /* JFKit-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JFKit-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B7E34B3750A80347D9577 /* JFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNetManager.m; sourceTree = "<group>"; };
@@ -125,6 +131,23 @@
 			path = "JFKit-master";
 			sourceTree = "<group>";
 		};
+		997B79042CFE19A4D16416ED /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				997B79223AC1B2ED9DBC4238 /* MBProgress */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		997B79223AC1B2ED9DBC4238 /* MBProgress */ = {
+			isa = PBXGroup;
+			children = (
+				997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */,
+				997B7B58BA5A2E8772F1DB79 /* MBProgressHUD+JF.h */,
+			);
+			path = MBProgress;
+			sourceTree = "<group>";
+		};
 		997B7D915A7CC18A64B18AA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +163,8 @@
 				997B794293F1C254DCF92556 /* CPApi.h */,
 				997B7408445A82CF07FD0ECF /* CPApiResponse.m */,
 				997B74639C4FD3A7F5A2666D /* CPApiResponse.h */,
+				997B74073A15C7DFA4915069 /* CPApiError.m */,
+				997B731815D7D73A09AA7208 /* CPApiError.h */,
 			);
 			path = CPApi;
 			sourceTree = "<group>";
@@ -168,6 +193,7 @@
 			children = (
 				997B72B7410B43E74ADE420E /* NetWork */,
 				997B7F2910CDE872A8B142CC /* Category */,
+				997B79042CFE19A4D16416ED /* Alert */,
 			);
 			path = JFKit;
 			sourceTree = "<group>";
@@ -183,6 +209,7 @@
 				997B76EB537A0876B6E2F287 /* Sources */,
 				997B7A95FD64424D68CC216A /* Frameworks */,
 				997B7D58F198E6E63419EA52 /* Resources */,
+				EA7BADCD5FE4F27410C7F310 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EA7BADCD5FE4F27410C7F310 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -267,6 +312,8 @@
 				997B7D572498583F0BBE52BF /* CPApi.m in Sources */,
 				997B72060F23ACA5A6754065 /* CPApiResponse.m in Sources */,
 				997B7F107C218E6596219AAC /* JFLog.m in Sources */,
+				997B76FDE0D450BF383B211E /* MBProgressHUD+JF.m in Sources */,
+				997B7B39ECBD775271DC8E5A /* CPApiError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "CRF.JFKit-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Release;
 		};
@@ -426,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "CRF.JFKit-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Debug;
 		};

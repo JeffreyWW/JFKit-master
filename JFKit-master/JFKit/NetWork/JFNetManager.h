@@ -36,8 +36,6 @@ typedef NS_ENUM(NSInteger, JFDataStyle) {
 @property(nonatomic, assign) JFDataStyle requestDataStyle;
 /**结果格式*/
 @property(nonatomic, assign) JFDataStyle responseDataStyle;
-@property(nonatomic, strong) RACMulticastConnection *connection;
-@property(nonatomic, strong) RACCommand *command;
 /**外部api通过此信号转化为新的信号,入参为解析类,方法名等,先通过加密赋值parameters,最后的筛选结果通过soruceSignal筛选,*/
 @property(nonatomic, strong) RACSignal *coldSignal;
 

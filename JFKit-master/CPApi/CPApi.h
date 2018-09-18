@@ -8,7 +8,7 @@
 #import "CPApiResponse.h"
 
 @interface CPApi<ResponseType> : NSObject
-@property(nonatomic, strong, readonly) RACSignal<ResponseType> *signal;
+@property(nonatomic, strong) RACSignal<ResponseType> *signal;
 @property(nonatomic, copy) NSString *method;
 @property(nonatomic, copy) NSArray *main;
 

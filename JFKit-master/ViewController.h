@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class JFNetManager;
+@class JFNetManager;@class RACCommand;
 
 @protocol ControllerProtocol
 @required
