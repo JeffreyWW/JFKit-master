@@ -36,10 +36,11 @@
     NSString *alertMessage = nil;
     if ([error isKindOfClass:CPApiError.class]) {
         CPApiError *cpApiError = error;
-        alertMessage = cpApiError.response.errorMessage;
+        alertMessage = cpApiError.response.reason;
         __weak typeof(self) weakSelf = self;
         self.hiddenIndeterminateCompletion(^{
             [MBProgressHUD showMessage:alertMessage inView:self.view completionBlock:^{
+                NSLog(@"INFO:%@",alertMessage);
                 [weakSelf dealWithCpApiErrorType:cpApiError.errorType];
             }];
         });

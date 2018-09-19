@@ -7,9 +7,10 @@
 #import "JFNetManager.h"
 #import "CPApiResponse.h"
 
-@interface CPApi<ResponseType> : NSObject
+@interface CPApi<ResponseType> : NSObject <YYModel>
 @property(nonatomic, strong) RACSignal<ResponseType> *signal;
 @property(nonatomic, copy) NSString *method;
 @property(nonatomic, copy) NSArray *main;
+@property(nonatomic, assign) Class responseTypeClass;
 
 @end

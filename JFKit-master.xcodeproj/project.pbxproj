@@ -10,18 +10,19 @@
 		00BAE10C214A6FEF005D64DC /* sssss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10B214A6FEF005D64DC /* sssss.plist */; };
 		00BAE10E214A74C8005D64DC /* good.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10D214A74C8005D64DC /* good.plist */; };
 		00BAE110214A755E005D64DC /* fuck.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10F214A755E005D64DC /* fuck.plist */; };
-		997B72060F23ACA5A6754065 /* CPApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7408445A82CF07FD0ECF /* CPApiResponse.m */; };
 		997B72071841E618638FA448 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E4C025041E62473A82F /* AppDelegate.m */; };
 		997B73059A86A35BE6EFA3DC /* JFNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E34B3750A80347D9577 /* JFNetManager.m */; };
 		997B74283B5BF3B5C771B975 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B76DB453CFF1A2D5B54E3 /* ViewController.m */; };
 		997B757CBCBEE475FF3D7AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B7108F69C60B6008B441F /* Assets.xcassets */; };
 		997B75E0FB7682B9390B4F49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B728546D83BECAD6B2BDF /* main.m */; };
 		997B76FDE0D450BF383B211E /* MBProgressHUD+JF.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */; };
+		997B7774583DBF9498DA7690 /* CPApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7C2DB9F04897E3C34D8A /* CPApiResponse.m */; };
+		997B77A478F5727017C28667 /* CPApiError.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B76C4172211A6CC3D2B4A /* CPApiError.m */; };
 		997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7FF41602BFFB0E725941 /* Main.storyboard */; };
 		997B7A006FDE4A92AD8F1CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7B6127B16915326D3383 /* LaunchScreen.storyboard */; };
-		997B7B39ECBD775271DC8E5A /* CPApiError.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B74073A15C7DFA4915069 /* CPApiError.m */; };
-		997B7D572498583F0BBE52BF /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */; };
+		997B7B7E3D00801EE49DEF0C /* FoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7400789D0D750005FABF /* FoodCategory.m */; };
 		997B7F107C218E6596219AAC /* JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B719E914E97695E7F7216 /* JFLog.m */; };
+		997B7FAC927E3D0561C79F12 /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7B69979CED546B0BFD7C /* CPApi.m */; };
 		F8BA2363AF192B8906A9E5E9 /* libPods-JFKit-master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */; };
 /* End PBXBuildFile section */
 
@@ -31,20 +32,23 @@
 		00BAE10F214A755E005D64DC /* fuck.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fuck.plist; sourceTree = "<group>"; };
 		19656F414BF6280B4FB5490F /* Pods-JFKit-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFKit-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master.release.xcconfig"; sourceTree = "<group>"; };
 		1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFKit-master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		997B70CBF229A8B68494B6A4 /* CPApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiResponse.h; sourceTree = "<group>"; };
 		997B7108F69C60B6008B441F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		997B719E914E97695E7F7216 /* JFLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLog.m; sourceTree = "<group>"; };
 		997B728546D83BECAD6B2BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		997B731815D7D73A09AA7208 /* CPApiError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiError.h; sourceTree = "<group>"; };
 		997B733C39F28BD2F0951A2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		997B74073A15C7DFA4915069 /* CPApiError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiError.m; sourceTree = "<group>"; };
-		997B7408445A82CF07FD0ECF /* CPApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiResponse.m; sourceTree = "<group>"; };
-		997B74639C4FD3A7F5A2666D /* CPApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiResponse.h; sourceTree = "<group>"; };
+		997B73E5CEFB153C17CE2045 /* CPApiError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiError.h; sourceTree = "<group>"; };
+		997B7400789D0D750005FABF /* FoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodCategory.m; sourceTree = "<group>"; };
+		997B7458F960D0DF5AFE2718 /* CPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApi.h; sourceTree = "<group>"; };
 		997B7633B94A7CEE131B2DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		997B76C4172211A6CC3D2B4A /* CPApiError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiError.m; sourceTree = "<group>"; };
 		997B76DB453CFF1A2D5B54E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		997B7793C9336B245C43A2DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		997B794293F1C254DCF92556 /* CPApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApi.h; sourceTree = "<group>"; };
+		997B77CC87B32CDD2801D81D /* FoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCategory.h; sourceTree = "<group>"; };
 		997B79DE2952DE5C7E5D461D /* JFNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFNetManager.h; sourceTree = "<group>"; };
 		997B7B58BA5A2E8772F1DB79 /* MBProgressHUD+JF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JF.h"; sourceTree = "<group>"; };
+		997B7B69979CED546B0BFD7C /* CPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApi.m; sourceTree = "<group>"; };
+		997B7C2DB9F04897E3C34D8A /* CPApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiResponse.m; sourceTree = "<group>"; };
 		997B7C9AFDC149654BFE43AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JF.m"; sourceTree = "<group>"; };
 		997B7D1B47433054D526476F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,7 +56,6 @@
 		997B7E34B3750A80347D9577 /* JFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNetManager.m; sourceTree = "<group>"; };
 		997B7E4C025041E62473A82F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		997B7FAB1C90FDCC8B625ED6 /* JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLog.h; sourceTree = "<group>"; };
-		997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApi.m; sourceTree = "<group>"; };
 		E2AA5B1D4B356EF5ECAD09D3 /* Pods-JFKit-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFKit-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,6 +97,13 @@
 			path = Fundation;
 			sourceTree = "<group>";
 		};
+		997B717D4126DF16A3B3B8E4 /* CPApiInstances */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CPApiInstances;
+			sourceTree = "<group>";
+		};
 		997B72B7410B43E74ADE420E /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,28 @@
 				00BAE10B214A6FEF005D64DC /* sssss.plist */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		997B7532A7DD751F71615633 /* CPApiCore */ = {
+			isa = PBXGroup;
+			children = (
+				997B7C2DB9F04897E3C34D8A /* CPApiResponse.m */,
+				997B70CBF229A8B68494B6A4 /* CPApiResponse.h */,
+				997B7B69979CED546B0BFD7C /* CPApi.m */,
+				997B73E5CEFB153C17CE2045 /* CPApiError.h */,
+				997B7458F960D0DF5AFE2718 /* CPApi.h */,
+				997B76C4172211A6CC3D2B4A /* CPApiError.m */,
+			);
+			path = CPApiCore;
+			sourceTree = "<group>";
+		};
+		997B766E4DE296499DC2D94D /* CPApiModels */ = {
+			isa = PBXGroup;
+			children = (
+				997B7400789D0D750005FABF /* FoodCategory.m */,
+				997B77CC87B32CDD2801D81D /* FoodCategory.h */,
+			);
+			path = CPApiModels;
 			sourceTree = "<group>";
 		};
 		997B77D0B927ED4B9E696382 /* JFKit-master */ = {
@@ -159,12 +191,9 @@
 		997B7E18B193DD4B43D90BE6 /* CPApi */ = {
 			isa = PBXGroup;
 			children = (
-				997B7FE8A5BC3BFA4417EAC3 /* CPApi.m */,
-				997B794293F1C254DCF92556 /* CPApi.h */,
-				997B7408445A82CF07FD0ECF /* CPApiResponse.m */,
-				997B74639C4FD3A7F5A2666D /* CPApiResponse.h */,
-				997B74073A15C7DFA4915069 /* CPApiError.m */,
-				997B731815D7D73A09AA7208 /* CPApiError.h */,
+				997B7532A7DD751F71615633 /* CPApiCore */,
+				997B717D4126DF16A3B3B8E4 /* CPApiInstances */,
+				997B766E4DE296499DC2D94D /* CPApiModels */,
 			);
 			path = CPApi;
 			sourceTree = "<group>";
@@ -309,11 +338,12 @@
 				997B72071841E618638FA448 /* AppDelegate.m in Sources */,
 				997B74283B5BF3B5C771B975 /* ViewController.m in Sources */,
 				997B73059A86A35BE6EFA3DC /* JFNetManager.m in Sources */,
-				997B7D572498583F0BBE52BF /* CPApi.m in Sources */,
-				997B72060F23ACA5A6754065 /* CPApiResponse.m in Sources */,
 				997B7F107C218E6596219AAC /* JFLog.m in Sources */,
 				997B76FDE0D450BF383B211E /* MBProgressHUD+JF.m in Sources */,
-				997B7B39ECBD775271DC8E5A /* CPApiError.m in Sources */,
+				997B7774583DBF9498DA7690 /* CPApiResponse.m in Sources */,
+				997B7FAC927E3D0561C79F12 /* CPApi.m in Sources */,
+				997B77A478F5727017C28667 /* CPApiError.m in Sources */,
+				997B7B7E3D00801EE49DEF0C /* FoodCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +437,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "CRF.JFKit-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Release;
 		};
@@ -473,7 +503,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "CRF.JFKit-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/** \"${PROJECT_DIR}/../Pods\"/**";
 			};
 			name = Debug;
 		};

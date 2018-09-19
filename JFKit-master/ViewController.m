@@ -11,6 +11,7 @@
 #import "CPApi.h"
 #import "MBProgressHUD+JF.h"
 #import "CPApiError.h"
+#import "FoodCategory.h"
 
 @interface ViewController ()
 
@@ -23,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.api = [[CPApi alloc] init];
+    self.api.responseTypeClass = FoodDefaultCategory.class;
+//    self.api.responseTypeClass = CPType.class;
 
 }
 
@@ -35,8 +38,11 @@
 
     RACSignal *signal = [[[self.api.signal initially:self.showIndeterminateLoading] doCompleted:self.hiddenIndeterminate] doError:self.dealError];
 
-    [signal subscribeError:^(NSError *error) {
-        NSLog(@"INFO:错误");
+
+    [signal subscribeNext:^(id x) {
+        NSLog(@"INFO:%@", x);
+    }           completed:^{
+        NSLog(@"INFO:完成");
     }];
 }
 @end

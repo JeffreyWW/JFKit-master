@@ -9,12 +9,12 @@
 @implementation CPApiResponse
 + (nullable NSDictionary<NSString *, id> *)modelCustomPropertyMapper {
     return @{
-            @"resId":@"showapi_res_id",
-            @"errorMessage":@"showapi_res_error",
-            @"responseCode":@"showapi_res_code",
-            @"body":@"showapi_res_body",
+            @"resultCode": @"resultcode",
     };
 }
 
++ (nullable NSArray<NSString *> *)modelPropertyBlacklist {
+    return @[@"error_code"];
+}
 
 @end
