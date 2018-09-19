@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import "ReactiveObjC.h"
 #import "CPApi+Instance.h"
+
 @interface VMHome : NSObject
-@property(nonatomic, strong) CPApi *categoryApi;
+@property(nonatomic, strong) RACCommand *refreshCommand;
+@property(nonatomic, strong) NSArray *dataSource;
 @end

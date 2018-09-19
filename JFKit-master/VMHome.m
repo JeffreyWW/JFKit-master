@@ -4,13 +4,20 @@
 //
 
 #import "VMHome.h"
-@implementation VMHome
-- (CPApi *)categoryApi {
-    if (!_categoryApi) {
-        _categoryApi = [CPApi getFoodCategory:nil];
-    }
-    return _categoryApi;
-}
 
+@implementation VMHome
+
+- (RACCommand *)refreshCommand {
+    if (!_refreshCommand) {
+        @weakify(self);
+        _refreshCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+            return [[CPApi getFoodCategory:nil].signal doNext:^(CPApiResponse *x) {
+                @strongify(self);
+                self.dataSource = x.result;
+            }];
+        }];
+    }
+    return _refreshCommand;
+}
 
 @end

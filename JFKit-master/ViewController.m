@@ -9,16 +9,14 @@
 #import "ViewController.h"
 #import "JFNetManager.h"
 #import "CPApi.h"
-#import "MBProgressHUD+JF.h"
-#import "CPApiError.h"
 #import "FoodCategory.h"
 #import "VMHome.h"
+#import "UITableView+RefreshCommand.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, weak) IBOutlet UITableView *tableView;
 @property(nonatomic, copy) NSArray<FoodParentCategory *> *dataSource;
-@property(nonatomic, strong) VMHome *viewMode;
-@property(nonatomic, strong) RACSignal<CPApiResponse<NSArray<FoodParentCategory *> *> *> *signal;
+@property(nonatomic, strong) VMHome *viewModel;
 @end
 
 @implementation ViewController
@@ -26,14 +24,23 @@ static NSString *cellId = @"cellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
-    self.viewMode = [[VMHome alloc] init];
-    self.signal = self.viewMode.categoryApi.signal;
+    [self setupTableView];
+    [self setupRAC];
+}
+
+- (void)setupRAC {
+    self.viewModel = [[VMHome alloc] init];
     @weakify(self);
-    [self.signal subscribeNext:^(CPApiResponse<NSArray<FoodParentCategory *> *> *x) {
-        self.dataSource = x.result;
+    [RACObserve(self.viewModel, dataSource) subscribeNext:^(id x) {
+        @strongify(self);
+        self.dataSource = x;
         [self.tableView reloadData];
     }];
+    self.tableView.rac_refreshCommand = self.viewModel.refreshCommand;
+}
+
+- (void)setupTableView {
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
 }
 
 - (void)didReceiveMemoryWarning {

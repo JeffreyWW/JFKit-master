@@ -105,7 +105,9 @@
         @weakify(self);
         _coldSignal = [RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
             [self requestProgress:nil success:^(NSURLSessionDataTask *task, id response) {
+
                 [subscriber sendNext:response];
+                NSLog(@"INFO:success");
                 [subscriber sendCompleted];
             }             failure:^(NSURLSessionDataTask *task, NSError *error) {
                 [subscriber sendError:error];
