@@ -5,17 +5,13 @@
 
 #import "FoodCategory.h"
 
-@implementation FoodParentCategory {
-
-}
-@end
-
-@implementation FoodDefaultCategory
+@implementation FoodParentCategory
 + (nullable NSDictionary<NSString *, id> *)modelContainerPropertyGenericClass {
     return @{
             @"list": FoodSubCategory.class
     };
 }
+
 @end
 
 @implementation FoodSubCategory

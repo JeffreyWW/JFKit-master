@@ -18,9 +18,11 @@
 		997B76FDE0D450BF383B211E /* MBProgressHUD+JF.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */; };
 		997B7774583DBF9498DA7690 /* CPApiResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7C2DB9F04897E3C34D8A /* CPApiResponse.m */; };
 		997B77A478F5727017C28667 /* CPApiError.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B76C4172211A6CC3D2B4A /* CPApiError.m */; };
+		997B783FB8DF3D909B22BD7C /* VMHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7F59111221EA87E27F14 /* VMHome.m */; };
 		997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7FF41602BFFB0E725941 /* Main.storyboard */; };
 		997B7A006FDE4A92AD8F1CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7B6127B16915326D3383 /* LaunchScreen.storyboard */; };
 		997B7B7E3D00801EE49DEF0C /* FoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7400789D0D750005FABF /* FoodCategory.m */; };
+		997B7DF36DE16C2F4DAAA747 /* CPApi+Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7CBB9097E11EE553CFD3 /* CPApi+Instance.m */; };
 		997B7F107C218E6596219AAC /* JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B719E914E97695E7F7216 /* JFLog.m */; };
 		997B7FAC927E3D0561C79F12 /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7B69979CED546B0BFD7C /* CPApi.m */; };
 		F8BA2363AF192B8906A9E5E9 /* libPods-JFKit-master.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */; };
@@ -43,6 +45,7 @@
 		997B7633B94A7CEE131B2DAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		997B76C4172211A6CC3D2B4A /* CPApiError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiError.m; sourceTree = "<group>"; };
 		997B76DB453CFF1A2D5B54E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		997B773679DCBAD009917E29 /* VMHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMHome.h; sourceTree = "<group>"; };
 		997B7793C9336B245C43A2DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		997B77CC87B32CDD2801D81D /* FoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCategory.h; sourceTree = "<group>"; };
 		997B79DE2952DE5C7E5D461D /* JFNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFNetManager.h; sourceTree = "<group>"; };
@@ -51,10 +54,13 @@
 		997B7C2DB9F04897E3C34D8A /* CPApiResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPApiResponse.m; sourceTree = "<group>"; };
 		997B7C9AFDC149654BFE43AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		997B7CA527170DBD17E8123D /* MBProgressHUD+JF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JF.m"; sourceTree = "<group>"; };
+		997B7CBB9097E11EE553CFD3 /* CPApi+Instance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CPApi+Instance.m"; sourceTree = "<group>"; };
 		997B7D1B47433054D526476F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		997B7D93811DEDD38A7AF8E5 /* JFKit-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JFKit-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B7E34B3750A80347D9577 /* JFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNetManager.m; sourceTree = "<group>"; };
 		997B7E4C025041E62473A82F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		997B7F59111221EA87E27F14 /* VMHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMHome.m; sourceTree = "<group>"; };
+		997B7F9EF1EF24C45C2D5F60 /* CPApi+Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPApi+Instance.h"; sourceTree = "<group>"; };
 		997B7FAB1C90FDCC8B625ED6 /* JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLog.h; sourceTree = "<group>"; };
 		E2AA5B1D4B356EF5ECAD09D3 /* Pods-JFKit-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFKit-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +106,8 @@
 		997B717D4126DF16A3B3B8E4 /* CPApiInstances */ = {
 			isa = PBXGroup;
 			children = (
+				997B7CBB9097E11EE553CFD3 /* CPApi+Instance.m */,
+				997B7F9EF1EF24C45C2D5F60 /* CPApi+Instance.h */,
 			);
 			path = CPApiInstances;
 			sourceTree = "<group>";
@@ -159,6 +167,9 @@
 				997B7E18B193DD4B43D90BE6 /* CPApi */,
 				997B74DDC203812A9ABBC7EE /* Setting */,
 				00BAE10D214A74C8005D64DC /* good.plist */,
+				997B7AD6AFF819D81BCA4A1F /* Src */,
+				997B7F59111221EA87E27F14 /* VMHome.m */,
+				997B773679DCBAD009917E29 /* VMHome.h */,
 			);
 			path = "JFKit-master";
 			sourceTree = "<group>";
@@ -178,6 +189,13 @@
 				997B7B58BA5A2E8772F1DB79 /* MBProgressHUD+JF.h */,
 			);
 			path = MBProgress;
+			sourceTree = "<group>";
+		};
+		997B7AD6AFF819D81BCA4A1F /* Src */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Src;
 			sourceTree = "<group>";
 		};
 		997B7D915A7CC18A64B18AA2 /* Products */ = {
@@ -344,6 +362,8 @@
 				997B7FAC927E3D0561C79F12 /* CPApi.m in Sources */,
 				997B77A478F5727017C28667 /* CPApiError.m in Sources */,
 				997B7B7E3D00801EE49DEF0C /* FoodCategory.m in Sources */,
+				997B783FB8DF3D909B22BD7C /* VMHome.m in Sources */,
+				997B7DF36DE16C2F4DAAA747 /* CPApi+Instance.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

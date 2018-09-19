@@ -23,9 +23,14 @@ static NSString *const kAppKey = @"4740860db0d0fcd49666663ae5f97f0e";
             return [self signalWithNetResponse:response error:errorPtr];
         }];
     }
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     NSDictionary *staticParameters = @{
             @"key": kAppKey,
     };
+    [parameters setValuesForKeysWithDictionary:staticParameters];
+    if (self.parameters) {
+        [parameters setValuesForKeysWithDictionary:self.parameters];
+    }
     _netManager.parameters = staticParameters;
     return _signal;
 }

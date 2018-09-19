@@ -9,8 +9,7 @@
 
 @interface CPApi<ResponseType> : NSObject <YYModel>
 @property(nonatomic, strong) RACSignal<ResponseType> *signal;
-@property(nonatomic, copy) NSString *method;
-@property(nonatomic, copy) NSArray *main;
+@property(nonatomic, copy) NSDictionary *parameters;
 @property(nonatomic, assign) Class responseTypeClass;
 
 @end
