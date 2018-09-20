@@ -10,5 +10,5 @@
 
 @interface CPApi (Instance)
 
-+ (CPApi *)getFoodCategory:(FoodParentCategory *)foodParentCategory;
++ (CPApi<NSArray<FoodParentCategory *> *> *)getFoodCategory:(FoodParentCategory *)foodParentCategory;
 @end

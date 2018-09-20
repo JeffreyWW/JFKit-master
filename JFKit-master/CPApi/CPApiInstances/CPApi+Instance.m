@@ -7,7 +7,7 @@
 #import "FoodCategory.h"
 
 @implementation CPApi (Instance)
-+ (CPApi *)getFoodCategory:(FoodParentCategory *)foodParentCategory {
++ (CPApi<NSArray<FoodParentCategory *> *> *)getFoodCategory:(FoodParentCategory *)foodParentCategory {
     CPApi *api = [[CPApi alloc] init];
     api.responseTypeClass = FoodParentCategory.class;
     if (!foodParentCategory) {

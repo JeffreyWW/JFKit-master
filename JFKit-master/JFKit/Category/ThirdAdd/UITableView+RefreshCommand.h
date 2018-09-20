@@ -9,6 +9,7 @@
 #import "ReactiveObjC.h"
 
 @interface UITableView (RefreshCommand)
+/**下拉刷新命令,下拉后会自动执行初始化的信号并在结束后停止刷新*/
 @property(nonatomic, strong) RACCommand *rac_refreshCommand;
 @property(nonatomic, strong) RACCommand *rac_loadMoreCommand;
 @end

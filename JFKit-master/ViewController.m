@@ -12,8 +12,10 @@
 #import "FoodCategory.h"
 #import "VMHome.h"
 #import "UITableView+RefreshCommand.h"
+#import "UIScrollView+EmptyDataSet.h"
+#import "CPApiError.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
 @property(nonatomic, weak) IBOutlet UITableView *tableView;
 @property(nonatomic, copy) NSArray<FoodParentCategory *> *dataSource;
 @property(nonatomic, strong) VMHome *viewModel;
@@ -30,13 +32,9 @@ static NSString *cellId = @"cellId";
 
 - (void)setupRAC {
     self.viewModel = [[VMHome alloc] init];
-    @weakify(self);
-    [RACObserve(self.viewModel, dataSource) subscribeNext:^(id x) {
-        @strongify(self);
-        self.dataSource = x;
-        [self.tableView reloadData];
-    }];
     self.tableView.rac_refreshCommand = self.viewModel.refreshCommand;
+    [self.tableView.rac_refreshCommand.errors subscribeNext:self.dealError];
+    RAC(self, dataSource) = [RACObserve(self.viewModel, dataSource) skip:1];
 }
 
 - (void)setupTableView {
@@ -66,6 +64,14 @@ static NSString *cellId = @"cellId";
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     FoodParentCategory *foodParentCategory = self.dataSource[(NSUInteger) section];
     return foodParentCategory.name;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView {
+    return [[NSAttributedString alloc] initWithString:@"22"];
 }
 
 @end

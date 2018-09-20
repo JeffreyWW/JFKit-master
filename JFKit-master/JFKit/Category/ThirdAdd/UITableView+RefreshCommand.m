@@ -17,7 +17,7 @@ static const void *_Nonnull refreshCommandKey;
     [rac_refreshCommand.executing subscribeNext:^(NSNumber *x) {
         BOOL executing = x.boolValue;
         if (!executing) {
-//            [self reloadData];
+            [self reloadData];
             [self.mj_header endRefreshing];
         }
     }];
