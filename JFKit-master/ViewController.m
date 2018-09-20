@@ -55,6 +55,7 @@ static NSString *cellId = @"cellId";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    /**显示一次,不用动态绑定*/
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     FoodSubCategory *subCategory = self.dataSource[(NSUInteger) indexPath.section].list[(NSUInteger) indexPath.row];
     cell.textLabel.text = subCategory.name;
