@@ -6,6 +6,8 @@
 #import "MBProgressHUD+JF.h"
 #import <objc/runtime.h>
 
+static const void *_Nonnull indeterminatekey;
+
 @implementation MBProgressHUD (JF)
 + (instancetype)HUDDefaultWithView:(UIView *)view {
     MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:view];
@@ -28,11 +30,25 @@
     return hud;
 }
 
-+ (instancetype)HUDIndeterminateWithView:(UIView *)view title:(NSString *)title {
-    MBProgressHUD *hud = [self HUDDefaultWithView:view];
++ (instancetype)showIndeterminateWithTitle:(NSString *)title inView:(UIView *)view {
+    MBProgressHUD *hud = [MBProgressHUD HUDDefaultWithView:view];
     hud.detailsLabel.text = title;
+    [view addSubview:hud];
+    objc_setAssociatedObject(view, indeterminatekey, hud, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [hud showAnimated:YES];
     return hud;
 }
+
+
++ (void)hiddenIndeterminateInView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
+    MBProgressHUD *hud = objc_getAssociatedObject(view, indeterminatekey);
+    if (hud) {
+        [hud hiddenAnimateCompletion:completionBlock];
+        return;
+    }
+    completionBlock();
+}
+
 
 + (void)showMessage:(NSString *)message inView:(UIView *)view completionBlock:(MBProgressHUDCompletionBlock)completionBlock {
     if (message.length == 0) {
@@ -65,56 +81,5 @@
 }
 @end
 
-static const void *_Nonnull hudKey;
-
-@implementation UIViewController (MBProgressHUD)
-- (void (^)(NSString *))showIndeterminate {
-    return ^(NSString *title) {
-        MBProgressHUD *progressHUD = objc_getAssociatedObject(self, hudKey);
-        if (!progressHUD) {
-            progressHUD = [MBProgressHUD HUDIndeterminateWithView:self.view title:title];
-            objc_setAssociatedObject(self, hudKey, progressHUD, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        }
-        [self.view addSubview:progressHUD];
-        [progressHUD showAnimated:YES];
-    };
-}
-
-- (void (^)(void))showIndeterminateLoading {
-    __weak typeof(self) weakSelf = self;
-    return ^{
-        weakSelf.showIndeterminate(@"加载中");
-    };
-}
-
-- (dispatch_block_t)hiddenIndeterminate {
-    return ^{
-        self.hiddenIndeterminateCompletion(nil);
-    };
-}
-
-- (void (^)(dispatch_block_t))hiddenIndeterminateCompletion {
-    return ^(dispatch_block_t completion) {
-        MBProgressHUD *progressHUD = objc_getAssociatedObject(self, hudKey);
-        if (progressHUD) {
-            [progressHUD hiddenAnimateCompletion:completion];
-        } else {
-            completion();
-        }
-    };
-}
 
 
-//- (NSString *(^)(void))showIndeterminate {
-//    return ^NSString * {
-//        return nil;
-//    };
-//    MBProgressHUD *hud = objc_getAssociatedObject(self, hudKey);
-//    if (!hud) {
-//        hud = [MBProgressHUD HUDIndeterminateWithView:self.view title:_title];
-//    }
-//
-//    return _showIndeterminate;
-//}
-
-@end

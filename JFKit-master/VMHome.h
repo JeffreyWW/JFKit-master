@@ -9,6 +9,5 @@
 
 @interface VMHome : NSObject
 @property(nonatomic, strong) RACSignal *foodSignal;
-@property(nonatomic, strong) RACCommand *refreshCommand;
 @property(nonatomic, strong) NSArray *dataSource;
 @end

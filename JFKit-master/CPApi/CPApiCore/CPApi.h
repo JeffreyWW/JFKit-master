@@ -8,7 +8,7 @@
 #import "CPApiResponse.h"
 
 @interface CPApi<ResponseType> : NSObject <YYModel>
-@property(nonatomic, strong) RACSignal<ResponseType> *signal;
+@property(nonatomic, strong) RACSignal<CPApiResponse<ResponseType> *> *signal;
 @property(nonatomic, copy) NSDictionary *parameters;
 @property(nonatomic, assign) Class responseTypeClass;
 

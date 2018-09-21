@@ -13,7 +13,8 @@
 #import "VMHome.h"
 #import "UITableView+RefreshCommand.h"
 #import "UIScrollView+EmptyDataSet.h"
-#import "CPApiError.h"
+#import "UIViewController+MBProgressHUD_RACSignal.h"
+#import "NSError+CPApi.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
 @property(nonatomic, weak) IBOutlet UITableView *tableView;
@@ -32,13 +33,18 @@ static NSString *cellId = @"cellId";
 
 - (void)setupRAC {
     self.viewModel = [[VMHome alloc] init];
-    self.tableView.rac_refreshCommand = self.viewModel.refreshCommand;
-    [self.tableView.rac_refreshCommand.errors subscribeNext:self.dealError];
     RAC(self, dataSource) = [RACObserve(self.viewModel, dataSource) skip:1];
+    RACSignal *apiSignal = [self.viewModel.foodSignal catch:^RACSignal *(NSError *error) {
+        return [self.showErrorMessageSignal(error) concat:self.dealErrorSignal(error)];;
+    }];
+    self.tableView.rac_refreshCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+        return apiSignal;
+    }];
 }
 
 - (void)setupTableView {
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellId];
+//    [self.tableView.rac_refreshCommand execute:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +74,18 @@ static NSString *cellId = @"cellId";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+//    RACSignal *signal = [[self.showLoadingSignal concat:[RACSignal createSignal:^RACDisposable *(id <RACSubscriber> subscriber) {
+//        [subscriber sendNext:@"1"];
+//        [subscriber sendCompleted];
+//        return nil;
+//    }]] concat:self.hiddenIndeterminateSignal];
+//
+//
+//    [signal subscribeNext:^(id x) {
+//        NSLog(@"INFO:%@", x);
+//    }];
+
 
 }
 

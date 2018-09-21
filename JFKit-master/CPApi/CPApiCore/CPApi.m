@@ -4,8 +4,7 @@
 //
 
 #import "CPApi.h"
-#import "CPApiError.h"
-
+#import "NSError+CPApi.h"
 static NSString *const kAppKey = @"4740860db0d0fcd49666663ae5f97f0e";
 
 @interface CPApi ()
@@ -54,7 +53,9 @@ static NSString *const kAppKey = @"4740860db0d0fcd49666663ae5f97f0e";
     }
     CPApiErrorType errorType = (CPApiErrorType) [response[@"error_code"] integerValue];
     if (errorType != CPApiErrorTypeNone) {
-        *error = [CPApiError errorWithErrorType:(CPApiErrorType) apiResponse.errorType response:apiResponse];
+        *error = [NSError errorWithDomain:@"com.crf" code:errorType userInfo:@{
+                NSLocalizedFailureReasonErrorKey: apiResponse.reason
+        }];
         return nil;
     }
     return apiResponse;

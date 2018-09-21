@@ -8,6 +8,7 @@
 static const void *_Nonnull refreshCommandKey;
 
 @implementation UITableView (RefreshCommand)
+
 - (RACCommand *)rac_refreshCommand {
     RACCommand *command = objc_getAssociatedObject(self, refreshCommandKey);
     return command;

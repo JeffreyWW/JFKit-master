@@ -9,6 +9,14 @@
 @class FoodParentCategory;
 
 @interface CPApi (Instance)
-
+/**
+ * 获取菜谱总表
+ * @param foodParentCategory
+ * @return
+ */
 + (CPApi<NSArray<FoodParentCategory *> *> *)getFoodCategory:(FoodParentCategory *)foodParentCategory;
+
+/**
+ * ......
+ */
 @end
