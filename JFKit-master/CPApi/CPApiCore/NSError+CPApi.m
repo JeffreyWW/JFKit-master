@@ -4,6 +4,7 @@
 //
 
 #import "NSError+CPApi.h"
+#import "UIViewController+MBProgressHUD_RACSignal.h"
 
 
 @implementation NSError (CPApi)
@@ -24,6 +25,33 @@
         } else {
             return nil;
         }
+    };
+}
+
+- (void (^)(__kindof NSError *))dealErrorBlock {
+    return ^(__kindof NSError *error) {
+        if ([error.domain isEqualToString:@"com.crf"]) {
+            CPApiErrorType errorType = (CPApiErrorType) error.code;
+            [self dealWithCpApiErrorType:errorType];
+        } else {
+
+        }
+    };
+}
+
+
+- (RACSignal *(^)(__kindof NSError *))showErrorSignal {
+    return ^RACSignal *(__kindof NSError *error) {
+        return [[self.hiddenIndeterminateSignal concat:self.showErrorMessageSignal(error)] concat:self.dealErrorSignal(error)];
+    };
+
+}
+
+- (void (^)(__kindof NSError *))showErrorBlock {
+    return ^(__kindof NSError *error) {
+        [[self.hiddenIndeterminateSignal concat:self.showErrorMessageSignal(error)] subscribeCompleted:^{
+            self.dealErrorSignal(error);
+        }];
     };
 }
 

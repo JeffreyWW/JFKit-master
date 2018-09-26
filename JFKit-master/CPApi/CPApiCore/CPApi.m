@@ -24,7 +24,7 @@ static NSString *const kAppKey = @"4740860db0d0fcd49666663ae5f97f0e";
     }
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     NSDictionary *staticParameters = @{
-            @"key": kAppKey,
+            @"key": @"!",
     };
     [parameters setValuesForKeysWithDictionary:staticParameters];
     if (self.parameters) {

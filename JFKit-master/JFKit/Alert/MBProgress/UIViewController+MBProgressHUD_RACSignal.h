@@ -20,13 +20,4 @@
 @property(nonatomic, copy, readonly) RACSignal *(^showMessageSignal)(NSString *message);
 /**弹错误提示,错误信息为NSLocalizedFailureReasonErrorKey*/
 @property(nonatomic, copy, readonly) RACSignal *(^showErrorMessageSignal)(__kindof NSError *error);
-/**
- * 综合信号,传入两个信号,将会:
- * 1.在当前视图转圈
- * 2.等待传入信号A完成,完成后进行3
- * 3.若成功,停止转圈,并监听A的next
- * 4.若失败,停止转圈,弹错误原因,并执行信号B的错误处理
- * */
-/**弹提示信号*/
-@property(nonatomic, copy, readonly) RACSignal *(^simpleSignnal)(RACSignal *listeningSignal, RACSignal *dealErrorSignal);
 @end

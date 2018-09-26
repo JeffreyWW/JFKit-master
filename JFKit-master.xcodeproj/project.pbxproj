@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00BAE10C214A6FEF005D64DC /* sssss.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10B214A6FEF005D64DC /* sssss.plist */; };
 		00BAE10E214A74C8005D64DC /* good.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10D214A74C8005D64DC /* good.plist */; };
-		00BAE110214A755E005D64DC /* fuck.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00BAE10F214A755E005D64DC /* fuck.plist */; };
 		997B70E11405BDC63DA5B505 /* NSError+CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B795A289CB009BE60561B /* NSError+CPApi.m */; };
 		997B72071841E618638FA448 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E4C025041E62473A82F /* AppDelegate.m */; };
 		997B73059A86A35BE6EFA3DC /* JFNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7E34B3750A80347D9577 /* JFNetManager.m */; };
@@ -25,6 +24,7 @@
 		997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7FF41602BFFB0E725941 /* Main.storyboard */; };
 		997B7A006FDE4A92AD8F1CBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 997B7B6127B16915326D3383 /* LaunchScreen.storyboard */; };
 		997B7B7E3D00801EE49DEF0C /* FoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7400789D0D750005FABF /* FoodCategory.m */; };
+		997B7BC757EEB74A04E52724 /* UIViewController+DealApiSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B78578933A392F6285298 /* UIViewController+DealApiSignal.m */; };
 		997B7DF36DE16C2F4DAAA747 /* CPApi+Instance.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7CBB9097E11EE553CFD3 /* CPApi+Instance.m */; };
 		997B7F107C218E6596219AAC /* JFLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B719E914E97695E7F7216 /* JFLog.m */; };
 		997B7FAC927E3D0561C79F12 /* CPApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 997B7B69979CED546B0BFD7C /* CPApi.m */; };
@@ -34,7 +34,6 @@
 /* Begin PBXFileReference section */
 		00BAE10B214A6FEF005D64DC /* sssss.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = sssss.plist; sourceTree = "<group>"; };
 		00BAE10D214A74C8005D64DC /* good.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = good.plist; sourceTree = "<group>"; };
-		00BAE10F214A755E005D64DC /* fuck.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = fuck.plist; sourceTree = "<group>"; };
 		19656F414BF6280B4FB5490F /* Pods-JFKit-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFKit-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master.release.xcconfig"; sourceTree = "<group>"; };
 		1D89BFB95B25AFF259CF460C /* libPods-JFKit-master.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JFKit-master.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B70CBF229A8B68494B6A4 /* CPApiResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPApiResponse.h; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		997B777E2156AEC42C69FB88 /* UITableView+RefreshCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RefreshCommand.m"; sourceTree = "<group>"; };
 		997B7793C9336B245C43A2DA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		997B77CC87B32CDD2801D81D /* FoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodCategory.h; sourceTree = "<group>"; };
+		997B78578933A392F6285298 /* UIViewController+DealApiSignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DealApiSignal.m"; sourceTree = "<group>"; };
 		997B78DE65AAE9840DB3025F /* UITableView+RefreshCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+RefreshCommand.h"; sourceTree = "<group>"; };
 		997B7946184C5E6EF4586A9C /* UIViewController+MBProgressHUD_RACSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBProgressHUD_RACSignal.h"; sourceTree = "<group>"; };
 		997B795A289CB009BE60561B /* NSError+CPApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+CPApi.m"; sourceTree = "<group>"; };
@@ -69,6 +69,7 @@
 		997B7E34B3750A80347D9577 /* JFNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFNetManager.m; sourceTree = "<group>"; };
 		997B7E4C025041E62473A82F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		997B7F59111221EA87E27F14 /* VMHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMHome.m; sourceTree = "<group>"; };
+		997B7F5EFA43F255B6C196A5 /* UIViewController+DealApiSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DealApiSignal.h"; sourceTree = "<group>"; };
 		997B7F9EF1EF24C45C2D5F60 /* CPApi+Instance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CPApi+Instance.h"; sourceTree = "<group>"; };
 		997B7FAB1C90FDCC8B625ED6 /* JFLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLog.h; sourceTree = "<group>"; };
 		E2AA5B1D4B356EF5ECAD09D3 /* Pods-JFKit-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JFKit-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JFKit-master/Pods-JFKit-master.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +159,8 @@
 				997B7458F960D0DF5AFE2718 /* CPApi.h */,
 				997B795A289CB009BE60561B /* NSError+CPApi.m */,
 				997B7BAD277490FE5CFE362D /* NSError+CPApi.h */,
+				997B78578933A392F6285298 /* UIViewController+DealApiSignal.m */,
+				997B7F5EFA43F255B6C196A5 /* UIViewController+DealApiSignal.h */,
 			);
 			path = CPApiCore;
 			sourceTree = "<group>";
@@ -241,7 +244,6 @@
 		997B7EABB07A38EFBD92E3BD = {
 			isa = PBXGroup;
 			children = (
-				00BAE10F214A755E005D64DC /* fuck.plist */,
 				997B7D915A7CC18A64B18AA2 /* Products */,
 				997B77D0B927ED4B9E696382 /* JFKit-master */,
 				24228A33D13FBEFD11EAAE49 /* Pods */,
@@ -325,7 +327,6 @@
 				997B791D398979DAA8CCE9A0 /* Main.storyboard in Resources */,
 				00BAE10E214A74C8005D64DC /* good.plist in Resources */,
 				00BAE10C214A6FEF005D64DC /* sssss.plist in Resources */,
-				00BAE110214A755E005D64DC /* fuck.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +391,7 @@
 				997B78BCE631E24758BC1820 /* UITableView+EmptyHandler.m in Sources */,
 				997B77ECBDF4556433513EA0 /* UIViewController+MBProgressHUD_RACSignal.m in Sources */,
 				997B70E11405BDC63DA5B505 /* NSError+CPApi.m in Sources */,
+				997B7BC757EEB74A04E52724 /* UIViewController+DealApiSignal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

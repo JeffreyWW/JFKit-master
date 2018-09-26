@@ -5,6 +5,7 @@
 
 #import "UIViewController+MBProgressHUD_RACSignal.h"
 #import "MBProgressHUD+JF.h"
+#import "NSError+CPApi.h"
 
 @implementation UIViewController (MBProgressHUD_RACSignal)
 - (RACSignal *(^)(NSString *))showIndeterminateSignal {
@@ -53,5 +54,7 @@
         return self.showMessageSignal(errorReason);
     };
 }
+
+
 
 @end
